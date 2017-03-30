@@ -1,0 +1,44 @@
+//1521101015 - Marcos Serafim e Gabriela Pianezzola
+======Implementação do Processo de Gram Schmidt=========================
+** Algoritmo desenvolvido em C no SO Fedora 23
+========================================================================
+
+Tudo bom professor?
+
+Algumas considerações e limitações sobre o código:
+
+ * A implementação do processo de Gram Schmidt só funcionará no espaço vetorial R^5 com cinco vetores, conforme o exemplo fornecido no forum da disciplina;
+ * Os pontos dos vetores podem variar em qualquer valor pertencente ao conjunto dos naturais menores que 10, incluindo o '0' (Sim, eu sei que o subespaço para testes ficou bastante limitado, pedimos desculpas antecipadamente por isso). Isto deve-se à uma limitação encontrada no processo de leitura do arquivo;
+ * A leitura correta das entradas só funcionará se seguir a estrutura padrão do arquivo nero.txt, isto é:
+
+(N,N,N,N,N)
+(N,N,N,N,N)
+(N,N,N,N,N)
+(N,N,N,N,N)
+(N,N,N,N,N)
+
+	Onde N representa qualquer numero natural;
+ * O arquivo de entrada deve estar na mesma pasta de execução do programa;
+ * O arquivo de entrada deve possuir o nome 'nero.txt', sem aspas;
+
+ * A saída do programa será exibida tanto no terminal de compilação como no arquivo nero.txt
+
+Instruções de compilação:
+ * Foram implementadas algumas bibliotecas próprias para a execução do programa. As mesmas já estão compiladas na pasta raiz do código, entretanto caso precise compilar novamente o comando é:
+	  gcc Funcitions.h
+		e
+ 	  gcc -c Funcitions.c
+
+Para compilar o arquivo principal do código fonte o seguinte comando deverá ser feito:
+
+	gcc Functions.o -lm P_Gram_Schmidt.c
+
+ * O programa compilado já encontra-se na pasta com o nome a.out, mas pode compilar e sobreescreve-lo sem problemas.
+ * Caso queira alterar o valor dos pontos dos vetores, pode ser feita diretamente no arquivo nero.txt e não necessitará recompilar o programa (ou seja, poderá ser usado o mesmo executável 'a.out')
+
+OBS.: Não conseguimos encontrar uma solução de implementação viável (em questão de tempo) uma função que verifique se o vetor é LI ou LD. Neste caso, caso seja informado um conjunto de vetores linearmente dependentes o algorimo executará da mesma forma.
+
+
+Att,
+Marcos e Gabriela 
+
